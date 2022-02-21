@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Dimensions, Text, View } from 'react-native';
+import { Image, StyleSheet, Dimensions, Text, View, Button } from 'react-native';
 
 import topo from '../../assets/topo.png'
 import logo from '../../assets/logo.png'
@@ -13,12 +13,13 @@ export default function Cesta() {
 
       <View style={estilos.cesta}>
          <Text style={estilos.nome}> Cesta de Verduras</Text>
-         <View style = {estilos.fazenda}>
+         <View style={estilos.fazenda}>
             <Image source={logo} style={estilos.imagemFazenda} />
             <Text style={estilos.nomeFazenda}> Jenny Jack Farm</Text>
          </View>
          <Text style={estilos.descricao}> Produtos selecionados de qualidade</Text>
          <Text style={estilos.preco}>R$ 40,00</Text>
+         <Button title="Press Me"></Button>
       </View>
 
    </>
