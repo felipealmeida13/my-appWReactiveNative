@@ -1,34 +1,35 @@
 import React from 'react';
 import { Image, StyleSheet, Dimensions, Text, View, Button } from 'react-native';
 
-import topo from '../../assets/topo.png'
-import logo from '../../assets/logo.png'
+import Texto from '../componentes/Texto';
+
+import topo from '../../assets/topo.png';
+import logo from '../../assets/logo.png';
 
 const width = Dimensions.get('screen').width;
 
 export default function Cesta() {
    return <>
       <Image source={topo} style={estilos.topo} />
-      <Text style={estilos.titulo}>Detalhes da Cesta</Text>
+      <Texto style={estilos.titulo}>Detalhes da Cesta</Texto>
 
       <View style={estilos.cesta}>
          <Text style={estilos.nome}> Cesta de Verduras</Text>
          <View style={estilos.fazenda}>
             <Image source={logo} style={estilos.imagemFazenda} />
-            <Text style={estilos.nomeFazenda}> Jenny Jack Farm</Text>
+            <Texto style={estilos.nomeFazenda}> Jenny Jack Farm</Texto>
          </View>
-         <Text style={estilos.descricao}> Produtos selecionados de qualidade</Text>
-         <Text style={estilos.preco}>R$ 40,00</Text>
-         <Button title="Press Me"></Button>
+         <Texto style={estilos.descricao}> Produtos selecionados de qualidade</Texto>
+         <Texto style={estilos.preco}>R$ 40,00</Texto>
+         <Button title="Comprar" style={estilos.botao}></Button>
       </View>
-
    </>
 }
 
 const estilos = StyleSheet.create({
    topo: {
       width: "100%",
-      height: 578 / 768 * width,
+      height: "30%",
    },
    titulo: {
       position: "absolute",
@@ -60,12 +61,11 @@ const estilos = StyleSheet.create({
    },
    nomeFazenda: {
       fontSize: 16,
-      lineHeight: 26,
+      //lineHeight: 26,
    },
    descricao: {
       color: "#A3A3A3",
       fontSize: 16,
-      lineHeight: 26,
    },
    preco: {
       color: "#2A9F85",
@@ -74,4 +74,10 @@ const estilos = StyleSheet.create({
       lineHeight: 42,
       marginTop: 8,
    },
+   botao: {
+      marginTop: 16,
+      backgroundColor: "#2A9F85",
+      paddingVertical: 16,
+      borderRadius: 6,
+   }
 });
