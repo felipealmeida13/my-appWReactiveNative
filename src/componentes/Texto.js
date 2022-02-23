@@ -12,7 +12,7 @@ export default function Texto({ children, style }) {
 }
 const estilos = StyleSheet.create({
     texto: {
-        fontFamily: 'Helvetica',
+        fontWeight: 'normal'
     },
     textoNegrito: {
         fontWeight: 'normal',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Dimensions, Text, View, Button } from 'react-native';
+import { Image, StyleSheet, Dimensions, Text, View, Button, Alert } from 'react-native';
 
 import Texto from '../componentes/Texto';
 
@@ -21,7 +21,11 @@ export default function Cesta() {
          </View>
          <Texto style={estilos.descricao}> Produtos selecionados de qualidade</Texto>
          <Texto style={estilos.preco}>R$ 40,00</Texto>
-         <Button title="Comprar" style={estilos.botao}></Button>
+         <Button 
+            title="Comprar" 
+            color="#2A9F85" 
+            accessibilityLabel='Realizar compra'
+            onPress={()=> Alert.alert('Ainda não existe nenhum item para comprar')}></Button>
       </View>
    </>
 }
@@ -61,7 +65,6 @@ const estilos = StyleSheet.create({
    },
    nomeFazenda: {
       fontSize: 16,
-      //lineHeight: 26,
    },
    descricao: {
       color: "#A3A3A3",
@@ -74,10 +77,4 @@ const estilos = StyleSheet.create({
       lineHeight: 42,
       marginTop: 8,
    },
-   botao: {
-      marginTop: 16,
-      backgroundColor: "#2A9F85",
-      paddingVertical: 16,
-      borderRadius: 6,
-   }
 });
